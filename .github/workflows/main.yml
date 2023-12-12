@@ -34,7 +34,8 @@ jobs:
                       cd /home/ubuntu/test/
                       git pull origin main
 
-                      echo "SECRET_KEY=\"${{ secrets.SECRET_KEY }}\"" >> .env
+                      cd drf_test/
+                      echo "SECRET_KEY=\"${{ secrets.SECRET_KEY }}\"" > .env
                       echo "DEBUG='${{ secrets.DEBUG }}'" >> .env
 
                       source /home/ubuntu/venv/bin/activate
