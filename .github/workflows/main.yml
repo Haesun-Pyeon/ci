@@ -37,6 +37,7 @@ jobs:
                       cd drf_test/
                       echo "SECRET_KEY=\"${{ secrets.SECRET_KEY }}\"" > .env
                       echo "DEBUG='${{ secrets.DEBUG }}'" >> .env
+                      cd ..
 
                       source /home/ubuntu/venv/bin/activate
                       pip install -r requirements.txt
